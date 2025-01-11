@@ -6,6 +6,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 https://angular.dev/reference/versions
 
+## to run this app in local because it has Angular 9
+set NODE_OPTIONS=--openssl-legacy-provider
+
 ## Use npm dedupe to eliminate duplicate dependencies:
 ```bash
 npm dedupe
