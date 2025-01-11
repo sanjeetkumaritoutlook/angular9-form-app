@@ -1,7 +1,26 @@
-# Mdf
+# Mdf (now known as angular9-form-app)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.13.
 
+## Angular and node compatibility check:
+
+https://angular.dev/reference/versions
+
+## Use npm dedupe to eliminate duplicate dependencies:
+```bash
+npm dedupe
+```
+
+## can bypass NGCC processing by disabling Ivy in tsconfig.json:
+```json
+"angularCompilerOptions": {
+  "enableIvy": false
+}
+```
+
+## Add the postinstall script in package.json to ensure NGCC runs automatically after npm install:
+ Angular Compatibility Compiler (NGCC) tries to process an Angular library and encounters conflicts due to overlapping entry points or duplicate processing attempts. This commonly happens in CI/CD pipelines like GitHub Actions because of incomplete or redundant setup.
+ 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

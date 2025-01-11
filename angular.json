@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mdf": {
+    "angular9-form-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/mdf",
+            "outputPath": "dist/angular9-form-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,18 +64,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "mdf:build"
+            "browserTarget": "angular9-form-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "mdf:build:production"
+              "browserTarget": "angular9-form-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "mdf:build"
+            "browserTarget": "angular9-form-app:build"
           }
         },
         "test": {
@@ -113,16 +113,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "mdf:serve"
+            "devServerTarget": "angular9-form-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "mdf:serve:production"
+              "devServerTarget": "angular9-form-app:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "mdf"
+  "defaultProject": "angular9-form-app"
 }

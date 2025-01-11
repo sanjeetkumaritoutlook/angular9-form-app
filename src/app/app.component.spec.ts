@@ -20,10 +20,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'mdf'`, () => {
+  it(`should have as title 'angular9-form-app'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('mdf');
+    expect(app.title).toEqual('angular9-form-app');
   });
 
   it('should render title', () => {

@@ -63,7 +63,7 @@ showOutput = false;
     this.textTs = '';
     this.showOutput = false;    
   } 
-  // title = 'mdf';
+  // title = 'angular9-form-app';
   // contactForm = new FormGroup({})
   contactForm = new FormGroup({
     //firstname: new FormControl(),
