@@ -1,0 +1,7 @@
+<p>form-group-as-control works!</p>
+<form [formGroup]="modelYear" class="widget" (ngSubmit)="onSubmit()">
+    <label for="model">model</label>
+    <input type="text" class="form-control" formControlName="model">
+    <label for="year">year</label>
+    <input type="date" class="form-control" formControlName= "year">
+</form>

@@ -1,0 +1,69 @@
+<p>nav-keep-content works!</p>
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" [destroyOnHide]="false" class="nav-tabs">
+	<li [ngbNavItem]="1">
+		<a ngbNavLink>Personal Information</a>
+		<ng-template ngbNavContent>
+			<form>
+				<div class="row">
+					<div class="col">
+            <label for="exampleFormControlInput1">First Name</label>
+						<input type="text" class="form-control" placeholder="First name">
+          </div>
+				  <div class="col">
+            <label for="exampleFormControlInput1">Last Name</label>
+						<input type="text" class="form-control" placeholder="Last name">
+          </div>
+				</div>
+			</form>
+		</ng-template>
+	</li>
+	<li [ngbNavItem]="2">
+		<a ngbNavLink>Professional Information</a>
+		<ng-template ngbNavContent>
+			<form>
+				<div class="row">
+					<div class="col">
+            <label for="exampleFormControlInput1">Currently Employed</label>
+						<select class="form-control" id="exampleFormControlSelect1">
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+				  <div class="col">
+            <label for="exampleFormControlInput1">Company Name</label>
+						<input type="text" class="form-control" placeholder="Company name">
+          </div>
+				</div>
+			</form>
+		</ng-template>
+	</li>
+	<li [ngbNavItem]="3">
+		<a ngbNavLink>Address</a>
+		<ng-template ngbNavContent let-active>
+			<form>
+				<div class="form-group">
+					<div class="col">
+            <label for="exampleFormControlInput1">Flat No.</label>
+						<input type="text" class="form-control">
+          </div>
+				  <div class="col">
+            <label for="exampleFormControlInput1">Address 1</label>
+						<input type="text" class="form-control">
+          </div>
+          <div class="col">
+            <label for="exampleFormControlInput1">Address 2</label>
+						<input type="text" class="form-control">
+          </div>
+				</div>
+			</form>
+		</ng-template>
+	</li>
+</ul>
+
+<div [ngbNavOutlet]="nav" class="mt-2 mb-2">
+</div>
+<div class="row">
+  <button type="button" class="ml-1 btn btn-secondary" (click)="previous()">Previous</button>
+  <button *ngIf="active !== 3" type="button" class="ml-auto mr-1 btn btn-secondary" (click)="next()">Next</button>
+  <button *ngIf="active === 3" type="button" class="ml-auto mr-1 btn btn-secondary" (click)="submit()">Submit</button>
+</div>

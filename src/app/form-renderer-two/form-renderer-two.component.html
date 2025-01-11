@@ -1,0 +1,8 @@
+<div  class="card">
+	<div class="card-body">
+    <h1>Custom Form Two Example</h1>
+    <p> a formio form object </p>
+    <formio [form]="customForms" (submit)="onSubmit($event)"></formio>
+    <pre>{{ customForms | json }}</pre>
+  </div>
+</div>

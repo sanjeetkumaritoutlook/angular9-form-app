@@ -1,0 +1,30 @@
+<p>subscriber works!</p>
+<div class="card">
+    <div class="card-content">
+      <div class="content">
+        <form [formGroup]="subscriptionForm" novalidate (ngSubmit)="onSubmit()">
+          <div class="field is-grouped">
+            <p class="control is-expanded">
+              <input
+                class="input is-light is-warning"
+                [ngClass]="{
+                  'is-danger': email.invalid && (email.dirty || email.touched)
+                }"
+                type="text"
+                placeholder="Your email address"
+                id="email"
+                formControlName="email"
+              />
+            </p>
+            <p class="control">
+              <input
+                class="button is-warning is-light is-outlined"
+                value="Subscribe"
+                type="submit"
+              />
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

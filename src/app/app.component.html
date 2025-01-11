@@ -1,0 +1,175 @@
+<p>form rederder in angular material formio dynamic form builder</p>
+<app-form-material></app-form-material>
+<!--<app-form-renderer-two></app-form-renderer-two>-->
+<p>form rederder formio dynamic form builder</p>
+<app-form-rederer></app-form-rederer>
+<p>shared form control</p>
+<app-parent-form-one></app-parent-form-one>
+<!-- <app-subscriber></app-subscriber>  -->
+<app-login></app-login>
+
+<app-nav-keep-content></app-nav-keep-content>
+ <!-- <app-reactive-form></app-reactive-form>  -->
+<autocomplete-auto-active-first-option-example></autocomplete-auto-active-first-option-example>
+<div style="text-align:center" class="text-white">
+  <h1>
+    Angular Template Form Builder
+  </h1>
+  <h5>Simply enter JSON object and get Angular template form source code...</h5>
+</div>
+<br>
+<div class="container">
+  <div class="row" style="text-align:center">
+    <div class="col-md-3 col-md-offset-3">
+      <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
+        <div>
+          <textarea rows="10" cols="50" name="jsonData" [(ngModel)]="jsonData" placeholder="Enter JSON response here..." required></textarea>
+        </div>
+        <button class="btn btn-lg btn-primary" type="submit" [disabled]="form.invalid">Submit</button>
+        <button class="btn btn-lg btn-danger" (click)="reset(form)" type="button">Reset</button>
+      </form>
+    </div>
+  </div>
+  <br>
+
+  <div *ngIf="showOutput">
+    <div class="row">
+      <div class="col-md-6">
+        <h3 class="text-white">Output</h3>
+        <div [innerHTML]="resultHtml">
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <h4 class="text-white">Template Form HTML</h4>        
+        <div class="alert alert-light" role="alert">
+          <pre>
+                  <code>
+                      {{textHtml}}
+                  </code>
+          </pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <h4 class="text-white">Template Form Typescript </h4>
+        <div class="alert alert-light" role="alert">
+          <pre>
+                    <code>
+                        {{textTs}}
+                    </code>
+            </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <h5>
+      <span class="label label-primary text-white">Sanjeet Kumar </span>
+    </h5>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      <h5>
+        <a href="https://www.google.com" target="_blank">Link 1</a>
+      </h5>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-3">
+      <h5>
+        <a href="https://github.com/ultrasonicsoft" target="_blank">Link 2</a>
+      </h5>
+    </div>
+  </div>
+</div>
+
+<h1>Second form starts here</h1>
+<form [formGroup]="contactForm" (ngSubmit)="onSubmitt()">
+ 
+  <p>
+    <label for="firstname" >First Name </label>
+    <input type="text" id="firstname" name="firstname" formControlName="firstname">
+  </p>
+ 
+  <p>
+    <label for="lastname">Last Name </label>
+    <input type="text" id="lastname" name="lastname" formControlName="lastname">
+  </p>
+ 
+  <p>
+    <label for="email">Email </label>
+    <input type="text" id="email" name="email" formControlName="email">
+  </p>
+ 
+  <p>
+    <label for="gender">Geneder </label>
+    <input type="radio" value="male" id="gender" name="gender" formControlName="gender"> Male
+    <input type="radio" value="female" id="gender" name="gender" formControlName="gender"> Female
+  </p>
+ 
+  <p>
+    <label for="isMarried">Married </label>
+    <input type="checkbox" id="isMarried" name="isMarried" formControlName="isMarried">
+  </p>
+ 
+  <p>
+    <label for="country">country </label>
+    <select id="country" name="country" formControlName="country"> 
+      <!-- <option [ngValue]="c.id" *ngFor="let c of countryList">
+        {{c.name}}
+      </option> -->
+    </select>
+  </p>
+ 
+
+  <!-- <div formGroupName="address">
+  
+    <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" class="form-control" name="city" formControlName="city" >
+    </div>
+ 
+    <div class="form-group">
+        <label for="street">Street</label>
+        <input type="text" class="form-control" name="street" formControlName="street" >
+    </div>
+ 
+    <div class="form-group">
+        <label for="pincode">Pin Code</label>
+        <input type="text" class="form-control" name="pincode" formControlName="pincode">
+    </div>
+ 
+  </div>
+   -->
+  <p>
+    <button type="submit">Submit</button>
+  </p>
+ 
+</form>
+
+<app-dynamic-form-simple-example>
+</app-dynamic-form-simple-example>
+<app-name-editor></app-name-editor>
+
+
+<app-profile-editor></app-profile-editor>
+
+<app-cascading-dropdown></app-cascading-dropdown>
+
+<p>build a a questionaire, which is just one kind of dynamic form</p>
+<div>
+  <h2>Job Application for Heroes</h2>
+  <app-dynamic-form [questions]="questions$ | async"></app-dynamic-form>
+</div>

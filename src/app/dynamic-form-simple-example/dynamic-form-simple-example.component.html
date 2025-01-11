@@ -1,0 +1,21 @@
+<p>dynamic-form-simple-example works!</p>
+<form [formGroup]="simpleFormGroup" class="flex-col col-md-6 d-flex p-2" (ngSubmit)="onSubmit()">
+    <label for="uname">username</label>
+    <input [type]="descriptor.name.type" 
+    class="form-control" [formControlName] = "descriptor.name.label">
+    <label for="description">description</label>
+    <input type="text" class="form-control" [formControlName] = "descriptor.description.label">
+    <label for="notes">notes</label>
+    <input type="text" class="form-control" [formControlName] = "descriptor.notes.label">
+  
+    <app-form-group-as-control [formControlName]="descriptor.modelyear.label">
+    </app-form-group-as-control>
+    
+    <button type="submit">OK</button>
+    <button>Cancel</button>
+</form>
+
+
+<p>
+  {{ resultVM }}
+</p>
