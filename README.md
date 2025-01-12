@@ -20,6 +20,10 @@ npm dedupe
   "enableIvy": false
 }
 ```
+## Examine Build Logs:
+
+Sometimes additional details can be found in the build logs. Enable verbose logging:
+ng build --verbose
 
 ## Add the postinstall script in package.json to ensure NGCC runs automatically after npm install:
  Angular Compatibility Compiler (NGCC) tries to process an Angular library and encounters conflicts due to overlapping entry points or duplicate processing attempts. This commonly happens in CI/CD pipelines like GitHub Actions because of incomplete or redundant setup.
